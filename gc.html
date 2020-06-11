@@ -8,44 +8,45 @@
   <meta name="keywords" content="devops,performance testing,performance engineering">
   <title>TECH HUB</title>
   <style media="screen">
-  #div1 {
-    height: 10%;
-    float: left;
-    width: 25%;
-  }
+    #div1 {
+      height: 10%;
+      float: left;
+      width: 25%;
+    }
 
-  #div2 {
-    height: 10%;
-    float: left;
-    width: 40%;
-    font-size: 250%;
-    text-align: center;
-    margin-top: 2%;
-  }
+    #div2 {
+      height: 10%;
+      float: left;
+      width: 40%;
+      font-size: 250%;
+      text-align: center;
+      margin-top: 2%;
+    }
 
-  #div3 {
-    height: 10%;
-    float: right;
-    width: 25%;
-    margin-left: 9.1%;
-    margin-top: 2.7%;
-    font-style: italic;
-  }
+    #div3 {
+      height: 10%;
+      float: right;
+      width: 25%;
+      margin-left: 9.1%;
+      margin-top: 2.7%;
+      font-style: italic;
+    }
 
-  #div4 {
-    height: 50%;
-    float: left;
-    width: 100%;
-    padding-top: 5px;
-    padding-left: 5px;
-    padding-bottom: 5px;
-    padding-right: 5px;
-  }
-  #div5 {
-     height: 50%;
-     float:left;
-     width:100%;
-  }
+    #div4 {
+      height: 50%;
+      float: left;
+      width: 100%;
+      padding-top: 5px;
+      padding-left: 5px;
+      padding-bottom: 5px;
+      padding-right: 5px;
+    }
+
+    #div5 {
+      height: 50%;
+      float: left;
+      width: 100%;
+    }
   </style>
 </head>
 
@@ -71,5 +72,59 @@
       <button type="submit" placeholder="Submit" name="Submit" style="height:19px;width:80px;background-color:darkgrey;border-style:solid;">Submit</button></span>
 
   </div>
+  <div id="div5">
+    <h2>
+      <center>GC Analysis<center>
+    </h2>
+    <p>In this article, we will understand how GC works in java.</p>
+    <h4>Topics :</h4>
+    <ul>
+      <li><a href="#JVM">JVM Architecture</a></li>
+    </ul>
+    <br>
+    <a name="JVM">
+      <article>
+        <header>
+          <strong>JVM Architecture</strong></p>
+        </header>
+        <p>Before understading GC analysis, we need to understand the JVM i.e Java virtual Machine architecture first.</p>
+        <img src="images/jvmarch.png" alt="JVM architecture" height="300" width="500" style="border-style:solid;">
+        <p>JVM (Java Virtual Machine) is an abstract machine. It is a specification that provides runtime environment in which java bytecode can be executed.</p>
+        <p>JVMs are available for many hardware and software platforms (i.e. JVM is platform dependent).</p>
+        <p>What it does?</p>
+        <p>The JVM performs following operation:</p>
+        <ol>
+          <li>Loads code</li>
+          <li>Verifies code</li>
+          <li>Executes code</li>
+          <li>Provides runtime environment</li>
+        </ol>
+        <p>It provides definition for</p>
+        <ol>
+          <li>Memory area</li>
+          <li>Class file format</li>
+          <li>Register set</li>
+          <li>Garbage-collected heap</li>
+          <li>Fatal error reporting etc.</li>
+        </ol>
+        <p>Let's understand each component of JVM in details</p>
+        <ul>
+          <li>
+            <h4>Classloader</h4>
+            <p>Classloader is a subsystem of JVM which is used to load class files. Whenever we run the java program, it is loaded first by the classloader. There are three built-in classloaders in Java.</p>
+            <ol>
+              <li><strong>Bootstrap ClassLoader:</strong> This is the first classloader which is the super class of Extension classloader. It loads the rt.jar file which contains all class files of Java Standard Edition like java.lang package
+                classes, java.net package classes, java.util package classes, java.io package classes, java.sql package classes etc</li><br>
+              <li><strong>Extension ClassLoader:</strong>This is the child classloader of Bootstrap and parent classloader of System classloader. It loades the jar files located inside $JAVA_HOME/jre/lib/ext directory.</li><br>
+              <li><strong>System/Application ClassLoader:</strong>This is the child classloader of Extension classloader. It loads the classfiles from classpath. By default, classpath is set to current directory. You can change the classpath using
+                "-cp" or "-classpath" switch. It is also known as Application classloader.</li><br>
+            </ol>
+          </li>
+        </ul>
+
+      </article>
+    </a>
+  </div>
 </body>
+
 </html>
