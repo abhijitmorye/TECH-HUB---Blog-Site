@@ -69,6 +69,13 @@ button {
     border-color: grey;
     color: white;
   }
+
+  #div6{
+    height:50%;
+    width:100%;
+    float:left;
+  }
+
   </style>
 </head>
 
@@ -93,6 +100,100 @@ button {
         <input type="text" name="search" placeholder="Search..">
         <button type="submit" placeholder="Submit" name="Submit">Submit</button></span>
         <hr>
+  </div>
+  <div id="div6">
+    <h2>
+      <center>Performance Testing with Taurus<center>
+    </h2>
+    <article>
+      <p>In this article, we will understand how we can do performance testing using Taurus which is an automation tools.</p>
+      <h4>Topics :</h4>
+      <ul>
+        <li><a href="#taurusintro">What is Taurus?</a></li>
+        <li><a href="#installation">Installation and Upgrades</a></li>
+        <li><a href="#tutorial"></a>Taurus Hands on Tutorial</li>
+      </ul>
+      <br>
+      <a name="taurusintro">
+        <p>
+          <strong>What is Taurus?</strong>
+        </p>
+        <ul>
+          <li>Taurus, an open source test automation tool that extends and abstracts JMeter and other testing tools, and helps to overcome different challenges such as Automation and integration with other systems.</li>
+          <li>Taurus provides a simple way to create, run and analyze performance tests.</li>
+          <li>Taurus is an acronym that stands for Test Automation Running Smoothly, which reflects its baseline mission - making the process of test configuration and execution as simple as possible.</li>
+        </ul>
+        <p>
+          <strong>Difficulties with different Testing tools :</strong>
+        </p>
+        <ul>
+          <p>Different open source tools are available in market i.e. Jmeter, Gatling, Locust.io.All these tools come with their advantages and disadvantages.</p>
+          <li>Different framework and underlying technologies(Jmeter based on Java and Gatling based on Scala).</li>
+          <li>Different methods to create scenarios.</li>
+          <li>Different Functions.</li>
+          <li>Different automation techniques with CI/CD tools.</li>
+        </ul>
+        <p>
+          <strong>Idea Behind Taurus</strong>
+        </p>
+        <p>Taurus takes the advantages of underlying open source perfromance testing tools such as Jmeter,Locust.io,Gatling etc.It provides the simple domain specific language i.e YAML,using which we can create performance script and can specify which tool/executer we want to use for performance testing.</p>
+        <center><img src="images/taurusidea.png" alt="taurus idea"  height="300" width="600" style="border-style:solid;"></center>
+        <p>As you can see from above picture,inner most box contains different open source tools that are used as execution engine by Taurus.Taurus uses Jmeter as it's default execution engine,however we can also specify which execution engine we want to use for testing.</p>
+        <p>Taurus can be scaled using Blazemeter cloud solution.</p>
+        <p>
+          <strong>Advantages using Taurus</strong>
+        </p>
+        <ol>
+          <li>Extremely simple setup and upgrading</li>
+          <li>Platform-independency - runs where Python and Java can run</li>
+          <li>An easily-readable, version control friendly and unified DSL (Domain-specific language) to define load test scenarios</li>
+          <li>The ability to execute existing JMeter (or Grinder or Gatling or Selenium) tests</li>
+          <li>The ability to create new tests from scratch using the aforementioned DSL</li>
+          <li>The ability to merge multiple existing test scripts and/or DSL-driven tests into a single scenario</li>
+          <li>Real-time reporting</li>
+          <li>Multiple test output formats (HTML,XML,JTL)</li>
+          <li>Integration with the blazemeter.com reporting service</li>
+          <li>An easy way to define flexible pass/fail criteria. In case the results exceed a threshold, it is possible to automatically mark test(s) as failed</li>
+        </ol>
+      </a>
+      <a name="installation">
+        <p>
+          <strong>Installation and Upgrades of Taurus</strong>
+        </p>
+        <ul>
+          <li>
+            <strong>On Windows OS: </strong>
+            <ol>
+              <li>Taurus can be installed using Taurus windows installer from <a href="https://gettaurus.org/install/Installation/">this link</a>.</li>
+              <li>This will install latest Python dependencies and Taurus on your windows system</li>
+            </ol>
+          </li>
+          <br>
+          <li>
+            <strong>On Linux OS: </strong>
+            <ol>
+              <li>pip install bzt 🡪 Will install Taurus in Linux machine. <em>Note.to use pip,instll pip using command apt-get install pip or yum install pip.</em></li>
+              <li>pip install --upgrade bzt 🡪 Will upgrade existing Taurus.</li>
+            </ol>
+          </li>
+          <br>
+          <li>
+            <strong>On MAC OS: </strong>
+            <ol>
+              <li>brew install bzt 🡪 Will install Taurus in MAC machine.</li>
+              <li>Brew upgrade bzt 🡪 Will upgrade existing Taurus.</li>
+            </ol>
+          </li>
+          <br>
+          <p>
+            <strong>You will need Python 3.6+ and Java installed.For further assistance, refer <a href="https://gettaurus.org/install/Installation/">this link</a>.</strong>
+          </p>
+        </ul>
+      </a>
+      <a name="tutorial"></a>
+      <p>Let's see the how we can perform perfromance tesing using Taurus.Go through below below hands on tutorial link.</p>
+      <p style="text-align:center"><a href="https://drive.google.com/file/d/1bRSdll3nF33c2NCKCzLqJNnlSkoDXAtz/view?usp=sharing" alt="Taurus Hands on Tutorial video">Taurus Hands on Tutorial video</a></p>
+    </article>
   </div>
 </body>
 </html>
